@@ -7,7 +7,7 @@ const NoteState = (props) => {
   const [notes, setNotes] = useState(initialNotes)
 
   const fetchnotes = async () => {
-    const response = await fetch("http://localhost:5000/notes/fetchallnotes", {
+    const response = await fetch("https://inotebook-ucvf.onrender.com/notes/fetchallnotes", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -21,7 +21,7 @@ const NoteState = (props) => {
   // add a note
   const addnote = async(title, discription, tag) => {
 
-    const response = await fetch("http://localhost:5000/notes/addnote", {
+    const response = await fetch("https://inotebook-ucvf.onrender.com/notes/addnote", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const NoteState = (props) => {
   // delete a note
   const deletenote = async (id) => {
 
-    const response = await fetch("http://localhost:5000/notes/deletenote/"+id, {
+    const response = await fetch("https://inotebook-ucvf.onrender.com/notes/deletenote/"+id, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ const NoteState = (props) => {
   // edit a note
   const editnote = async (id, title, discription, tag) => {
     //API call
-    const response = await fetch("http://localhost:5000/notes/updatenote/"+id, {
+    const response = await fetch("https://inotebook-ucvf.onrender.com/notes/updatenote/"+id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
